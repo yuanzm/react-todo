@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Todos</title>
+	<link rel="stylesheet" type="text/css" href="./main.css">
+</head>
+<body>
+	<div id="todoapp">
+		<!-- todoapp begin -->
+		<!-- header begin -->
+		<header>
+			<h1>Todos</h1>
+			<form>
+				<input id="new-todo" type="text" placeholder="What needs to be done?">	
+			</form>
+		</header>
+		<!-- header end -->
+
+		<!-- todoblock begin -->
+		<section>
+			<!-- todotoggle begin -->
+			<input id="toggle-all" type="checkbox">
+			<label for="toggle-all">Mark all as complete</label>
+			<!-- todotoggle end -->
+
+			<!-- todolist begin -->
+			<ul id="todo-list">
+				<li id="1" class="">
+					<div class="view">
+						<input type="checkbox" class="toggle">
+						<label>qwqw</label>
+						<span class="phone">2016-07-12 21:52:34</span>
+						<a class="destroy"></a>
+					</div>
+					<input class="edit" type="text" value="qwqw">
+				</li>
+			</ul>
+			<!-- todolist end -->
+		</section>
+
+		<!-- todoclear begin -->
+		<footer>
+	      	<a id="clear-completed">Clear completed</a>
+	      	<div id="todo-count">item left</div>
+	    </footer>
+	    <!-- todoclear end -->
+
+	    <!-- todoblock end -->
+		<!-- todoapp end -->
+	</div>
+	<div id="instructions">
+		Double-click to edit a todo.
+	</div>
+
+	 <div id="credits">
+	    Created by
+	   	<br />
+	    <a href="http://jgn.me/">J&eacute;r&ocirc;me Gravel-Niquet</a>.
+	    <br />Rewritten by: <a href="http://www.cnblogs.com/yuanzm">yuanzm</a>.
+	</div>
+</body>
+<script type="text/javascript" src="../build/bundle.js"></script>
+</html>

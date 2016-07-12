@@ -1,15 +1,8 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/app.jsx';
 
-const a = 1;
-let b = Array.of(3);
-
-var c = [1, 2 ,3 , 4];
-
-var d = c.find((n) => n > 2);
-
-console.log(d);
-
-c.includes(3);
-
-console.log(...[1,2])
+// ReactDOM.render(
+//   	<App />,
+// 	document.getElementById('todoapp')
+// );
