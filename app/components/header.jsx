@@ -33,7 +33,7 @@ export default class Header extends React.Component {
 		// 判断是否为回车事件
 		if ( e && e.keyCode === 13 ) {
 			// 通知外层组件新的todo已经成功创建
-			// this.props.onTodoCreate({todoText: text});
+			this.props.onTodoCreate({todoText: text});
 			this.clearTodoText();
 		}
 	}
