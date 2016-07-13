@@ -2,11 +2,21 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 export default class TodoClear extends React.Component {
+	constructor(props) {
+		super(props);
+
+		this.onClickClearBtn = this.onClickClearBtn.bind(this);
+	}
+
+	onClickClearBtn() {
+		this.props.onClearDone();
+	}
+
 	render() {
 		return (
-			<footer>
-		      	<a id="clear-completed">Clear completed</a>
-		      	<div id="todo-count">item left</div>
+			<footer style={{display: this.props.display}}>
+		      	<a id="clear-completed" onClick={this.onClickClearBtn}>Clear completed</a>
+		      	<div id="todo-count">{this.props.count} item left</div>
 		    </footer>
 		);
 	}

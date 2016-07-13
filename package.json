@@ -18,8 +18,9 @@
   },
   "homepage": "https://github.com/yuanzm/react-todo#readme",
   "dependencies": {
-    "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "babel": "^6.5.2",
+    "react": "*",
+    "react-dom": "*"
   },
   "devDependencies": {
     "babel-core": "^6.10.4",
