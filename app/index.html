@@ -6,14 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="./main.css">
 </head>
 <body>
-	<div id="todoapp">
+	<div id="todoapp"></div>
+	<div id="todoapp" style="display: none;">
 		<!-- todoapp begin -->
 		<!-- header begin -->
 		<header>
 			<h1>Todos</h1>
-			<form>
-				<input id="new-todo" type="text" placeholder="What needs to be done?">	
-			</form>
+			<!-- <form> -->
+				<input id="new-todo" type="text" placeholder="What needs to be done?">
+			<!-- </form> -->
 		</header>
 		<!-- header end -->
 
@@ -26,6 +27,7 @@
 
 			<!-- todolist begin -->
 			<ul id="todo-list">
+				<!-- todo begin -->
 				<li id="1" class="">
 					<div class="view">
 						<input type="checkbox" class="toggle">
@@ -35,6 +37,7 @@
 					</div>
 					<input class="edit" type="text" value="qwqw">
 				</li>
+				<!-- todo end -->
 			</ul>
 			<!-- todolist end -->
 		</section>
