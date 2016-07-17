@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 export default class Todo extends React.Component {
 	constructor(props) {
@@ -9,11 +8,11 @@ export default class Todo extends React.Component {
 		this.handleDelete = this.handleDelete.bind(this);
 	}
 
-	//处理todo切换状态事件
+	// 处理todo切换状态事件
 	handleToggle(e) {
-		var checked = e.target.checked;
+		let checked = e.target.checked;
 
-		var status = (  checked
+		let status = (  checked
 					  ? 'done'
 					  : ''  );
 
@@ -22,23 +21,38 @@ export default class Todo extends React.Component {
 	}
 
 	// 处理todo删除事件
-	handleDelete(e) {
+	handleDelete() {
 		// 通知上一层本todo已经删除
-		this.props.onTodoChange(this.props.id, 'delete', '');		
+		this.props.onTodoChange(this.props.id, 'delete', '');
 	}
 
 	render() {
 		return (
-			<li id={this.props.id} 
-				className={this.props.status}>
-				<div className="view">
-					<input type="checkbox" className="toggle" checked={this.props.checked} onChange={this.handleToggle} />
+			<li
+				id={this.props.id}
+				className={this.props.status} >
+				<div
+					className="view" >
+					<input
+						type="checkbox"
+						className="toggle"
+						checked={this.props.checked}
+						onChange={this.handleToggle} />
 					<label>{this.props.todoText}</label>
 					<span className="phone">{this.props.time}</span>
 					<a className="destroy" onClick={this.handleDelete} ></a>
 				</div>
 				<input className="edit" type="text" value={this.props.todoText} />
 			</li>
-		)
+		);
 	}
+}
+
+Todo.propTypes = {
+	onTodoChange : React.PropTypes.func.isRequired,
+	id           : React.PropTypes.number.isRequired,
+	status       : React.PropTypes.string.isRequired,
+	checked      : React.PropTypes.string.isRequired,
+	time         : React.PropTypes.string.isRequired,
+	todoText     : React.PropTypes.string.isRequired
 }

@@ -4,8 +4,10 @@
   "description": "a react version TODOLIST",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint app/**/*.jsx",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --config webpack.config.js"
+    "start": "webpack --watch --config webpack.config.js",
+    "deploy": "webpack -p --config webpack.production.config.js"
   },
   "repository": {
     "type": "git",
@@ -31,6 +33,11 @@
     "babel-preset-react": "^6.11.1",
     "babel-preset-stage-0": "^6.5.0",
     "css-loader": "^0.23.1",
+    "eslint": "^2.13.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-plugin-import": "^1.10.3",
+    "eslint-plugin-jsx-a11y": "^1.2.0",
+    "eslint-plugin-react": "^5.2.2",
     "webpack": "^1.13.1"
   }
 }

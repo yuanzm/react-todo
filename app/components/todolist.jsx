@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Todo from './todo.jsx';
 
 export default class TodoList extends React.Component {
@@ -18,16 +17,14 @@ export default class TodoList extends React.Component {
 	}
 
 	render() {
-		var todoNodes = this.props.data.map((todo) => 
-			(
-				<Todo
-					onTodoChange = {this.onTodoChangeHandler}
-					id 		     = {todo.id}
-					status       = {todo.status}
-					checked      = {todo.status === 'done'? 'checked': '' }
-					todoText     = {todo.todoText}
-					time         = {todo.time} />
-			)
+		let todoNodes = this.props.data.map(
+			(todo) => (<Todo
+				onTodoChange = {this.onTodoChangeHandler}
+				id 		     = {todo.id}
+				status       = {todo.status}
+				checked      = {todo.status === 'done' ? 'checked' : ''}
+				todoText     = {todo.todoText}
+				time         = {todo.time} />)
 		);
 
 		return (
@@ -36,4 +33,9 @@ export default class TodoList extends React.Component {
 			</ul>
 		);
 	}
+}
+
+TodoList.propTypes = {
+	data            : React.PropTypes.array.isRequired,
+	onOneTodoChange : React.PropTypes.array.isRequired
 }

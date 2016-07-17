@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 export default class TodoToggle extends React.Component {
 	constructor(props) {
@@ -8,8 +7,9 @@ export default class TodoToggle extends React.Component {
 		this.handleChange  = this.handleChange.bind(this);
 	}
 
+
 	handleChange(e) {
-		var checked = e.target.checked;
+		let checked = e.target.checked;
 
 		this.props.onAllChange(checked);
 	}
@@ -24,4 +24,9 @@ export default class TodoToggle extends React.Component {
 			</div>
 		);
 	}
+}
+
+TodoToggle.propTypes = {
+	onChange   : React.PropTypes.func.isRequired,
+	onAllChange: React.PropTypes.func.isRequired
 }
