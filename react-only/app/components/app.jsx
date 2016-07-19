@@ -64,7 +64,7 @@ export default class App extends React.Component {
 		this.saveOneTodo(newTodo);
 	}
 
-		// 为todo添加必要信息
+	// 为todo添加必要信息
 	todoFactory(_todo) {
 		const todo = _todo;
 		const data = this.states.data;
