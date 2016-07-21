@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint app/**/*.jsx app/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config webpack.dev.config.js --devtool eval --progress --hot --content-base app"
   },
   "author": "zimyuan",
   "license": "MIT",
   "dependencies": {
     "babel": "^6.5.2",
     "react": "^15.2.1",
-    "react-dom": "^15.2.1",
     "redux": "^3.5.2",
     "webpack": "^1.13.1"
   },
@@ -28,6 +29,10 @@
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.10.3",
     "eslint-plugin-jsx-a11y": "^1.2.0",
-    "eslint-plugin-react": "^5.2.2"
+    "eslint-plugin-react": "^5.2.2",
+    "react-dom": "^15.2.1",
+    "react-redux": "^4.4.5",
+    "open-browser-webpack-plugin": "0.0.2",
+    "webpack-dev-server": "latest"
   }
 }
